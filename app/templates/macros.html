@@ -1,0 +1,6 @@
+{% macro displayNewsSourcesList(source_list) %}
+    {% for source in source_list %}
+        <h5> {{source.source_name}} </h5>
+    {% endfor %}
+{% endmacro %}
+    
