@@ -93,4 +93,6 @@ def process_article_results(article_list):
         article_data = Article(source_name, article_title, article_description, article_image, article_url, article_publication_time)
         article_results.append(article_data)
 
+    return article_results
+
 
