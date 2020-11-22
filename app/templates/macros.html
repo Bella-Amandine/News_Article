@@ -1,6 +1,15 @@
 {% macro displayNewsSourcesList(source_list) %}
     {% for source in source_list %}
-        <h5> {{source.source_name}} </h5>
+        <div class="col-sm-3">
+            <div class="card bg-dark text-color">
+                <div class="card-body">
+                    <h5 class="card-tile font-weight-bold">{{source.source_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{source.category}}</h6>
+                    <p class="card-text">{{source.source_description}}</p>
+                    <a href="/article/{{source.source_id}}" class="card-link">Read Articles</a>
+                </div>
+            </div>
+        </div>
     {% endfor %}
 {% endmacro %}
 

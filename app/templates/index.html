@@ -1,3 +1,44 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
 {% block content %}
-    <h1>Welcomeeee</h1>
+
+    <div class="jumbotron">
+        <h2 class="display-3 text-center">Welcome To News Article</h2>
+        <h5 class="text-center">Get news from different news sources</h5>
+    </div>
+    <!--General news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(general) }} 
+    </div> 
+
+      <!--Health news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(health) }} 
+    </div> 
+
+    <!--Sport news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(sports) }} 
+    </div>
+
+    <!--Business news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(business) }} 
+    </div>
+
+    <!--Entertainment news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(entertainment) }} 
+    </div>
+
+    <!--Technology news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(technology) }} 
+    </div>
+
+    <!--science news-->
+    <div class="row">
+        {{ macro.displayNewsSourcesList(science) }} 
+    </div>
+    
 {% endblock %}
