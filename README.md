@@ -14,4 +14,4 @@ This application is a website that will help users to list and preview news arti
 ## Contact information
 * Email: bellamandy45@gmail.com
 ## Link to deployed application
-    https://bnewsarticle.herokuapp.com/
+https://bnewsarticle.herokuapp.com/
