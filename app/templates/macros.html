@@ -16,9 +16,18 @@
 <!--Displaying articles of a given sources-->
 {% macro displayArticles(article_list)%}
     {% for article in article_list %}
-        <h3>{{article.article_title}}</h3>
-        <img src={{article.article_image}} alt={{article.article_title}} width="100" height="100">
-        <a href={{article.article_url}} target="_blank"> Read More</a>
+        <div class="col-md-4">
+            <div class="card">
+                <img src={{article.article_image}} alt={{article.article_title}} class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ article.article_title }} </h5>
+                    <small class="card-subtitle">Published at {{article.publication_time}}</small>
+                    <p class="card-text">{{article.article_description}}</p>
+                    <a href={{article.article_url}} target="_blank" class="btn btn-info">Read More</a>
+                </div>
+            </div>
+        </div>
+        
     {% endfor %}
 {% endmacro%}
     
