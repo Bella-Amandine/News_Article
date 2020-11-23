@@ -16,7 +16,7 @@ def index():
     business_sources = get_sources('business')
 
     # Getting entertainment sources
-    entertainment_sources = get_sources('entertainment')
+    # entertainment_sources = get_sources('entertainment')
 
     # Getting general sources
     general_sources = get_sources('general')
@@ -33,7 +33,7 @@ def index():
 
     title = "Home - News Article"
 
-    return render_template("index.html", title = title, sports = sport_sources, general = general_sources, technology = technology_sources, health = health_sources, science = science_sources, business = business_sources, entertainment = entertainment_sources)
+    return render_template("index.html", title = title, sports = sport_sources, general = general_sources, technology = technology_sources, health = health_sources, science = science_sources, business = business_sources)
 
 @app.route("/article/<source_id>")
 def source(source_id):

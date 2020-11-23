@@ -1,7 +1,7 @@
 {% macro displayNewsSourcesList(source_list) %}
     {% for source in source_list %}
-        <div class="col-sm-3">
-            <div class="card bg-dark text-color">
+        <div class="col-sm-3 border">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-tile font-weight-bold">{{source.source_name}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{source.category}}</h6>
@@ -18,12 +18,12 @@
     {% for article in article_list %}
         <div class="col-md-4">
             <div class="card">
-                <img src={{article.article_image}} alt={{article.article_title}} class="card-img-top img-fluid">
+                <img src={{article.article_image}} alt={{article.article_title}} class="card-img-top img-fluid" width="300" height="300">
                 <div class="card-body">
                     <h5 class="card-title"> {{ article.article_title }} </h5>
-                    <small class="card-subtitle">Published at {{article.publication_time}}</small>
-                    <p class="card-text">{{article.article_description}}</p>
-                    <a href={{article.article_url}} target="_blank" class="btn btn-info">Read More</a>
+                    <small class="card-subtitle text-danger mb-2">Published at {{article.publication_time}}</small>
+                    <p class="card-text text-lead">{{article.article_description}}</p>
+                    <a href={{article.article_url}} target="_blank" class="btn btn-info mb-2">Read More</a>
                 </div>
             </div>
         </div>
